@@ -58,7 +58,6 @@ func (p peopleController) CreatePerson(res http.ResponseWriter, req *http.Reques
 	json.NewEncoder(res).Encode(p.People)
 }
 
-<<<<<<< HEAD
 func (p peopleController) DeletePerson(res http.ResponseWriter, req *http.Request) {
 	params := mux.Vars(req)
 	for index, item := range p.People {
@@ -68,15 +67,4 @@ func (p peopleController) DeletePerson(res http.ResponseWriter, req *http.Reques
 		}
 		json.NewEncoder(res).Encode(p.People)
 	}
-=======
-func (p peopleController) DeletePerson(res ResponseWriter, req *Request) {
-    params := Vars(req)
-    for index, item := range p.People {
-        if item.ID == params["id"] {
-            p.People = append(p.People[:index], p.People[index+1:]...)
-            break
-        }
-        NewEncoder(res).Encode(p.People)
-    }
->>>>>>> refs/remotes/origin/master
 }
