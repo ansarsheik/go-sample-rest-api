@@ -1,7 +1,7 @@
 package controllers
 
 import (
-    . "github.com/gorilla/mux"
+        . "github.com/gorilla/mux"
 	. "rest-api/entities"
 	. "net/http"
 	. "encoding/json"
